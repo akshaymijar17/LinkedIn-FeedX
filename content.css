@@ -1,0 +1,9 @@
+/* Feed: hide the main column on /feed (the original extension removed <main>). */
+html.feedx-hide-feed main {
+  display: none !important;
+}
+
+/* LinkedIn News sidebar module. */
+html.feedx-hide-news #feed-news-module {
+  display: none !important;
+}
