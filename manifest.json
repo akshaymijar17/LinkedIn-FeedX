@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "FeedX for LinkedIn",
+  "version": "1.0.0",
+  "description": "Hide the LinkedIn feed and LinkedIn News so you can use LinkedIn without the scroll.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["settings.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage"]
+}
